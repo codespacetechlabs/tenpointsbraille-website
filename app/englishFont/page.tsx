@@ -2,7 +2,7 @@ import SidebarEnglish from '@/app/components/SidebarEnglish';
 import Footer from '@/app/components/Footer';
 import Image from 'next/image';
 
-export default function about() {
+export default function EnglishFont() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Main content area */}
@@ -12,7 +12,7 @@ export default function about() {
           <SidebarEnglish />
         </aside>
         
-        {/* About content */}
+        {/* Content */}
         <main className="flex-1 flex flex-col items-center mt-40 bg-white rounded-lg">
           {/* Two column layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-4">
@@ -42,9 +42,9 @@ export default function about() {
             <div className="flex items-center justify-center">
               <Image
                 src="/Font/EnglishFont.avif"
-                alt="Braille Alphabet from A to I"
-                width={200}
-                height={500}
+                alt="English Braille Font"
+                width={400}
+                height={600}
                 className="rounded-lg object-contain"
               />
             </div>

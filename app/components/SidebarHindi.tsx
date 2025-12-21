@@ -1,35 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const navLinks = [
-  { hi: "विशेष", hiSlug: "/vishesh" },
-  { hi: "पुस्तक", hiSlug: "/pustak" },
-  { hi: "फोंट्स", hiSlug: "/hindifonts" },
-  { hi: "उपयोग", hiSlug: "/upyog" },
-  { hi: "डाउनलोड", hiSlug: "/hindidownload" },
-  { hi: "संपर्क", hiSlug: "/sampark" },
-];
+import { NAV_LINKS_HINDI } from "@/app/lib/constants";
 
 export default function SidebarHindi() {
   return (
-    <div className="flex flex-col items-center pt-8 bg-white min-h-screen mt-25">
+    <div className="flex flex-col items-center bg-white min-h-screen">
       {/* Logo */}
       <Image
-        src="/darklogo.png" // Replace with your logo path
+        src="/darklogo.png"
         alt="Tenpoints Braille Logo"
         width={320}
         height={100}
-        className="mb-6"
+        className="mb-6 w-80"
         priority
       />
 
       {/* Buttons grid */}
-      <div className="grid grid-cols-2 gap-x-8 gap-y-8 mt-4">
-        {navLinks.map((link, idx) => (
+      <div className="grid grid-cols-2 gap-8 mt-4">
+        {NAV_LINKS_HINDI.map((link, idx) => (
           <Link href={link.hiSlug} key={idx}>
             <button
-              className="w-28 h-28 rounded-full bg-black text-white flex flex-col justify-center items-center text-l shadow-xl select-none transition hover:bg-gray-300 hover:text-black"
-              style={{ whiteSpace: "pre-line",boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75)" }}
+              className="w-20 h-20 rounded-full bg-black text-white flex flex-col justify-center items-center text-sm shadow-xl select-none transition-all duration-300 ease-in-out hover:bg-gray-300 hover:text-black"
+              style={{ 
+                whiteSpace: "pre-line",
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 -10px 20px rgba(0, 0, 0, 0.3)"
+              }}
             >
               {link.hi}
             </button>
