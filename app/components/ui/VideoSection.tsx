@@ -18,6 +18,7 @@ export default function VideoSection({ src, title, className = "" }: VideoSectio
         data-playable-hook="background-canvas"
       ></canvas>
       <video
+        // preload="none"
         preload="none"
         playsInline
         controls

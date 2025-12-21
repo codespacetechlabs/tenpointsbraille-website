@@ -24,10 +24,10 @@ export default function EnglishLayout({
 
       <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-quicksand)]">
         <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
-            {/* Sidebar */}
-            <aside className="flex h-1/4 w-1/3 items-center justify-center">
+          {/* Sidebar */}
+          <aside className="flex h-1/4 w-1/3 items-center justify-center">
             <SidebarEnglish />
-            </aside>
+          </aside>
 
           {/* Main Content */}
           <div className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">{children}</div>

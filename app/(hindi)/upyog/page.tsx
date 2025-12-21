@@ -1,4 +1,4 @@
-import Image from "next/image";
+import VideoSection from "@/app/components/ui/VideoSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,58 +16,30 @@ export default function Upyog() {
 
         <div className="space-y-6 text-sm leading-relaxed text-gray-800 md:text-base">
           <p>
-                टेनपॉइंटस पुस्तक ब्रेल का उपयोग जानने के लिये नीचे दिया गया वीडियो देखें।
-              </p>
-            </div>
-            <div
-            className="relative w-[700px] h-[380px] mb-6 overflow-hidden rounded-lg shadow-lg mt-20"
-            data-playable-hook="screen-block"
-            data-playable-component=""
-          >
-            <canvas
-              className="absolute top-0 left-0 w-full h-full"
-              data-playable-hook="background-canvas"
-              width="700"
-              height="380"
-            ></canvas>
-            <video
-              preload="none"
-              playsInline
-              controls
-              className="w-full h-full object-cover rounded-lg"
-              src="/howtouse.mp4"
-            ></video>
-          </div>
-          <hr className="my-8 mt-20 w-full border-t border-black font-medium" />
-          <h1 className="text-4xl font-light mb-8 text-gray-900">
-              टेनपॉइंटस फोंट्स का उपयोग
-            </h1>
+            टेनपॉइंटस पुस्तक ब्रेल का उपयोग जानने के लिये नीचे दिया गया वीडियो देखें।
+          </p>
+        </div>
+
+        <div className="mt-2 flex justify-center">
+          <VideoSection src="/bookUsage.mp4" title="How to Use Tenpoints Braille" />
+        </div>
+
+        <hr className="my-8 mt-20 w-full border-t border-black font-medium" />
+
+        <h1 className="text-4xl font-light mb-8 text-gray-900">
+          टेनपॉइंटस फोंट्स का उपयोग
+        </h1>
             
-            {/* Content Paragraphs */}
-            <div className="space-y-6 text-gray-800 leading-relaxed">
-              <p className="text-sm">
-                टेनपॉइंटस ब्रेल फोंट्स का उपयोग जानने के लिये नीचे दिया गया वीडियो देखें।
-              </p>
-            </div>
-            <div
-            className="relative w-[700px] h-[380px] mb-6 overflow-hidden rounded-lg shadow-lg mt-20"
-            data-playable-hook="screen-block"
-            data-playable-component=""
-          >
-            <canvas
-              className="absolute top-0 left-0 w-full h-full"
-              data-playable-hook="background-canvas"
-              width="700"
-              height="380"
-            ></canvas>
-            <video
-              preload="none"
-              playsInline
-              controls
-              className="w-full h-full object-cover rounded-lg"
-              src="/howtouse.mp4"
-            ></video>
-          </div>
+        {/* Content Paragraphs */}
+        <div className="space-y-6 text-gray-800 leading-relaxed">
+          <p className="text-sm">
+            टेनपॉइंटस ब्रेल फोंट्स का उपयोग जानने के लिये नीचे दिया गया वीडियो देखें।
+          </p>
+        </div>
+        
+        <div className="mt-2 flex justify-center">
+          <VideoSection src="/hindiFontUsage.mp4" title="How to Use Tenpoints Braille Fonts" />
+        </div>
       </div>
     </main>
   );

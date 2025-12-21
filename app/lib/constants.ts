@@ -26,7 +26,7 @@ export const FONTS_DATA: FontData[] = [
   { char: "अ", language: "Hindi/Marathi", href: "/hindiFont" },
   { char: "অ", language: "Bengali/Assamese", href: "/bengaliFont" },
   { char: "અ", language: "Gujarati", href: "/gujaratiFont" },
-  { char: "ਅ", language: "Gurumukhi", href: "/gurmukhiFont" },
+  { char: "ਅ", language: "Gurmukhi", href: "/gurmukhiFont" },
   { char: "ಅ", language: "Kannada", href: "/kannadaFont" },
   { char: "അ", language: "Malayalam", href: "/malayalamFont" },
   { char: "ଅ", language: "Oriya", href: "/oriyaFont" },

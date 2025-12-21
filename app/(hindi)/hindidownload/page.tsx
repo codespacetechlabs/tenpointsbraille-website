@@ -15,7 +15,10 @@ export default function HindiDownload() {
         {/* Content */}
         <div className="space-y-6 text-sm leading-relaxed text-gray-800 md:text-base">
           <p>
-                टेनपॉइंटस ब्रेल परियोजना फिलहाल प्रायोगिक चरण में है। व्यापक पैमाने पर उपकरण अभी तैयार नहीं है। आप जल्द ही यहां से टेनपॉइंटस पुस्तक, फोंट्स और मोबाइल पीडीएफ डाउनलोड कर पायेंगे। अधिक जानकारी के लिए, हमें tenpointbraille@gmail.com पर एक ईमेल लिखिये।
+            टेनपॉइंटस ब्रेल परियोजना फिलहाल प्रायोगिक चरण में है। व्यापक पैमाने पर उपकरण अभी तैयार नहीं है। आप जल्द ही यहां से टेनपॉइंटस पुस्तक, फोंट्स और मोबाइल पीडीएफ डाउनलोड कर पायेंगे। अधिक जानकारी के लिए, हमें
+            <a href="mailto:tenpointsbraille@gmail.com" className="text-blue-600 hover:underline">
+              tenpointsbraille@gmail.com
+            </a> पर एक ईमेल लिखिये।
           </p>
         </div>
       </div>

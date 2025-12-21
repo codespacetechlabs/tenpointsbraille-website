@@ -18,7 +18,11 @@ export default function Download() {
           <p>
             The Tenpoints Braille project is currently in pilot stage. The tool is not yet ready
             for wide-scale roll-out. You will soon be able to download the Book, Fonts and Mobile
-            PDF from here. For updates, drop us a mail at tenpointsbraille@gmail.com.
+            PDF from here. For updates, drop us a mail at{" "}
+            <a href="mailto:tenpointsbraille@gmail.com" className="text-blue-600 hover:underline">
+              tenpointsbraille@gmail.com
+            </a>
+            .
           </p>
         </div>
       </div>

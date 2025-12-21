@@ -23,14 +23,14 @@ export default function HindiLayout({
       </div>
 
       <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-mukta)]">
-        <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[250px]">
+        <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
           {/* Desktop Sidebar - Hidden on mobile */}
-          <aside className="hidden w-1/3 items-center justify-center lg:flex">
+          <aside className="flex h-1/4 w-1/3 items-center justify-center">
             <SidebarHindi />
           </aside>
 
           {/* Main Content */}
-          <div className="mt-50 flex-1">{children}</div>
+          <div className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">{children}</div>
         </div>
 
         {/* Footer - Hidden on mobile */}

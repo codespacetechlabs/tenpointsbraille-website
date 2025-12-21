@@ -4,43 +4,57 @@ import Image from 'next/image';
 
 export default function BengaliFont() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-quicksand)]">
       {/* Main content area */}
-      <div className="flex flex-1 p-8 gap-8">
+      <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
         {/* Sidebar */}
-        <aside className="w-1/3 h-1/4 flex items-center justify-center">
+        <aside className="flex h-1/4 w-1/3 items-center justify-center">
           <SidebarEnglish />
         </aside>
-        
+
         {/* Content */}
-        <main className="flex-1 flex flex-col items-center mt-40 bg-white rounded-lg">
+        <main className="flex flex-1 flex-col items-center rounded-lg bg-white">
           {/* Two column layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-4">
-            {/* Left column - Image */}
-            <div className="flex items-center justify-center">
-              <Image
-                src="/Font/BengaliFont.avif"
-                alt="Bengali Braille Font"
-                width={400}
-                height={600}
-                className="rounded-lg object-contain"
-              />
-            </div>
-            
-            {/* Right column - Text content */}
-            <div className="flex flex-col justify-center space-y-6">
+            {/* Left column - Images */}
+            <div className="flex flex-col space-y-6">
               <Image
                 src="/Font/BengaliInfo.avif"
                 alt="Bengali Font Information"
-                width={400}
-                height={500}
+                width={300}
+                height={400}
+                className="rounded-lg object-contain"
+              />
+              <Image
+                src="/Font/BengaliFont.avif"
+                alt="Bengali Braille Font"
+                width={300}
+                height={400}
+                className="rounded-lg object-contain"
+              />
+            </div>
+
+            {/* Right column - Images */}
+            <div className="flex flex-col space-y-6">
+              <Image
+                src="/Font/assameseInfo.avif"
+                alt="Assamese Font Information"
+                width={300}
+                height={400}
+                className="rounded-lg object-contain"
+              />
+              <Image
+                src="/Font/BengaliFont.avif"
+                alt="Bengali Braille Font"
+                width={300}
+                height={400}
                 className="rounded-lg object-contain"
               />
             </div>
           </div>
         </main>
       </div>
-      
+
       {/* Footer */}
       <footer>
         <Footer />
