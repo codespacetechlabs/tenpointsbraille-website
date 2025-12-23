@@ -21,7 +21,7 @@ export default function SidebarEnglish() {
           <Link href={link.href} key={idx}>
             <button
               className="w-20 h-20 rounded-full bg-black text-white flex flex-col justify-center items-center text-sm shadow-xl select-none transition-all duration-300 ease-in-out hover:bg-gray-300 hover:text-black"
-              style={{ 
+              style={{
                 whiteSpace: "pre-line",
                 boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 -10px 20px rgba(0, 0, 0, 0.3)"
               }}

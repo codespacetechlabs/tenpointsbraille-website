@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SidebarEnglish from "./components/SidebarEnglish";
-import SidebarHindi from "./components/SidebarHindi";
-import MobileSidebar from "./components/MobileSidebar";
-import Footer from "./components/Footer";
 import { quicksand, mukta } from "./fonts";
 
 export const metadata: Metadata = {
@@ -50,20 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${quicksand.variable} ${mukta.variable} antialiased`}>
-        {/* Mobile Sidebar - Only visible on mobile */}
-        <MobileSidebar />
-
-          {/* Desktop Sidebars - Hidden on mobile */}
-
-          {/* Main Content */}
-          <main className="flex-1">
-            {children}
-          </main>
-
-          {/* Desktop Hindi Sidebar - Hidden on mobile */}
-  
-
-        {/* Footer - Only visible on desktop */}
+        {children}
       </body>
     </html>
   );

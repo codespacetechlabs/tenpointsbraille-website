@@ -1,5 +1,6 @@
 import SidebarEnglish from "@/app/components/SidebarEnglish";
 import Footer from "@/app/components/Footer";
+import MobileNavbar from "@/app/components/MobileNavbar";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -12,15 +13,20 @@ export const metadata: Metadata = {
 
 export default function EnglishLanding() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-quicksand)]">
-      <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
-        {/* Sidebar */}
-        <aside className="flex h-1/4 w-1/3 items-center justify-center">
-          <SidebarEnglish />
-        </aside>
+    <div className="min-h-screen bg-white font-[family-name:var(--font-quicksand)]">
+      {/* Mobile Navbar - Logo + Sticky Nav */}
+      <MobileNavbar language="english" />
 
-        {/* Main Content */}
-        <main className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex lg:min-h-screen lg:flex-col">
+        <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
+          {/* Desktop Sidebar */}
+          <aside className="flex h-1/4 w-1/3 items-center justify-center">
+            <SidebarEnglish />
+          </aside>
+
+          {/* Main Content */}
+          <main className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">
           {/* Video Section */}
           <div
             className="relative mb-6 h-[380px] w-[700px] overflow-hidden rounded-lg shadow-lg"
@@ -484,10 +490,392 @@ export default function EnglishLanding() {
           </div>
         </main>
       </div>
-      {/* Footer */}
-      <footer>
-        <Footer />
-      </footer>
+
+      {/* Desktop Footer */}
+      <Footer />
     </div>
-  );
+
+    {/* Mobile Content - Below the sticky navbar */}
+    <div className="lg:hidden">
+      <div className="px-4 py-6">
+        <main className="flex flex-col items-center justify-center">
+        {/* Video Section */}
+        <div
+          className="relative mb-6 w-full max-w-[700px] aspect-video overflow-hidden rounded-lg shadow-lg"
+          data-playable-hook="screen-block"
+          data-playable-component=""
+        >
+          <canvas
+            className="absolute left-0 top-0 h-full w-full"
+            data-playable-hook="background-canvas"
+          ></canvas>
+          <video
+            preload="none"
+            playsInline
+            controls
+            className="h-full w-full rounded-lg object-cover"
+            src="homescreenVideo.mp4"
+          ></video>
+        </div>
+
+        {/* Intro with MORE button */}
+        <div className="mt-6 flex flex-col items-center gap-4">
+          <p className="text-justify text-sm leading-relaxed text-gray-800">
+            Tenpoints Braille is an innovative tool designed to offer the ideal solution for the
+            issues confronted in learning and teaching Braille. It&apos;s an ingenious tool that
+            makes it easy for anyone to read Braille, even if they don&apos;t know the language.
+          </p>
+
+          <Link href="/about">
+            <button
+              className="w-32 h-32 select-none flex items-center justify-center rounded-full bg-black text-sm font-medium text-white shadow-2xl transition hover:bg-gray-300 hover:text-black"
+              style={{
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75)",
+              }}
+            >
+              MORE
+            </button>
+          </Link>
+        </div>
+
+        <hr className="my-6 w-full border-t border-black" />
+
+        {/* Braille Comparison */}
+        <div className="w-full px-4 py-6">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col items-center">
+              <h3 className="mb-4 text-sm text-gray-900">NORMAL BRAILLE</h3>
+              <div className="flex w-full items-center justify-center rounded-lg bg-white p-4">
+                <Image
+                  src="/normalBraille.png"
+                  alt="Normal Braille pattern showing traditional 6-dot system"
+                  width={300}
+                  height={225}
+                  className="w-full"
+                  priority
+                  style={{ objectFit: "contain", height: "auto" }}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <h3 className="mb-4 text-sm text-gray-900">TENPOINTS BRAILLE</h3>
+              <div className="flex w-full items-center justify-center rounded-lg bg-white p-4">
+                <Image
+                  src="/darklogo.png"
+                  alt="Tenpoints Braille showing innovative visual representation"
+                  width={300}
+                  height={225}
+                  className="w-full"
+                  priority
+                  style={{ objectFit: "contain", height: "auto" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="mb-4 text-sm text-gray-900 text-center">
+          TENPOINTS BRAILLE IN DIFFERENT LANGUAGES
+        </h3>
+
+        {/* Language Images Section - Mobile optimized grid */}
+        <div className="w-full px-4 py-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/English.png"
+                alt="English Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Hindi.png"
+                alt="Hindi Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Kannada.png"
+                alt="Kannada Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Telugu.png"
+                alt="Telugu Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Bengali.png"
+                alt="Bengali Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Tamil.png"
+                alt="Tamil Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Gujarati.png"
+                alt="Gujarati Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Gurmukhi.png"
+                alt="Gurmukhi Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Malayalam.png"
+                alt="Malayalam Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/languages/Oriya.png"
+                alt="Oriya Braille"
+                width={80}
+                height={80}
+                className="mb-2"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Language Links Section */}
+        <div className="w-full px-4 py-6">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-4">
+            <Link href="/englishFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              English
+            </Link>
+            <Link href="/hindiFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Hindi
+            </Link>
+            <Link href="/bengaliFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Bengali
+            </Link>
+            <Link href="/gujaratiFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Gujarati
+            </Link>
+            <Link href="/gurmukhiFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Gurmukhi
+            </Link>
+            <Link href="/kannadaFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Kannada
+            </Link>
+            <Link href="/malayalamFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Malayalam
+            </Link>
+            <Link href="/oriyaFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Oriya
+            </Link>
+            <Link href="/tamilFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Tamil
+            </Link>
+            <Link href="/teluguFont" className="text-center text-xs text-gray-800 hover:opacity-70">
+              Telugu
+            </Link>
+          </div>
+          {/* <div className="flex justify-start gap-6">
+            <span className="text-xs text-gray-800">German</span>
+            <span className="text-xs text-gray-800">French</span>
+            <span className="text-xs text-gray-800">Spanish</span>
+          </div> */}
+        </div>
+
+        <hr className="my-6 w-full border-t border-black" />
+
+        {/* Three Main Sections */}
+        <div className="w-full px-4 py-6">
+          <div className="flex flex-col gap-8">
+            {/* Book Section */}
+            <div className="flex flex-col items-start">
+              <div className="mb-3">
+                <Image
+                  src="/book-heading.png"
+                  alt="Book"
+                  width={100}
+                  height={33}
+                  style={{ height: "auto" }}
+                />
+              </div>
+              <h3 className="mb-2 text-sm font-semibold text-gray-900">
+                TENPOINTS BRAILLE BOOK
+              </h3>
+              <p className="text-xs leading-relaxed text-gray-700">
+                The Tenpoints Braille Book gives you the power to learn Braille in any language
+                of your choice. It contains all the letters of the alphabet......
+              </p>
+            </div>
+
+            {/* Font Section */}
+            <div className="flex flex-col items-start">
+              <div className="mb-3">
+                <Image
+                  src="/font-heading.png"
+                  alt="Font"
+                  width={100}
+                  height={33}
+                  style={{ height: "auto" }}
+                />
+              </div>
+              <h3 className="mb-2 text-sm font-semibold text-gray-900">
+                TENPOINTS BRAILLE FONTS
+              </h3>
+              <p className="text-xs leading-relaxed text-gray-700">
+                The Tenpoints Braille Font has been developed in multiple language scripts. It can
+                be easily downloaded and installed in software......
+              </p>
+            </div>
+
+            {/* Mobile PDF Section */}
+            <div className="flex flex-col items-start">
+              <div className="mb-3">
+                <Image
+                  src="/mobile-pdf-heading.png"
+                  alt="Mobile PDF"
+                  width={100}
+                  height={33}
+                  style={{ height: "auto" }}
+                />
+              </div>
+              <h3 className="mb-2 text-sm text-gray-900">
+                TENPOINTS <span className="font-semibold">MOBILE PDF</span>
+              </h3>
+              <p className="text-xs leading-relaxed text-gray-700">
+                The Tenpoints Braille Book is also available in pdf format. You can download......
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr className="my-6 w-full border-t border-black" />
+
+        {/* Five Feature Sections */}
+        <div className="w-full px-4 py-6">
+          <div className="grid grid-cols-2 gap-6">
+            {/* Anyone Can Teach */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-3 h-16 w-16">
+                <Image
+                  src="/icons/teach-icon.png"
+                  alt="Teaching icon"
+                  width={64}
+                  height={64}
+                  className="h-full w-full"
+                />
+              </div>
+              <h4 className="text-xs font-medium uppercase text-gray-900">
+                ANYONE CAN<br />TEACH
+              </h4>
+            </div>
+
+            {/* Anyone Can Afford */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-3 h-16 w-16">
+                <Image
+                  src="/icons/afford-icon.png"
+                  alt="Affordability icon"
+                  width={64}
+                  height={64}
+                  className="h-full w-full"
+                />
+              </div>
+              <h4 className="text-xs font-medium uppercase text-gray-900">
+                ANYONE<br />CAN AFFORD
+              </h4>
+            </div>
+
+            {/* Save 50% Paper */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-3 h-16 w-16">
+                <Image
+                  src="/icons/paper-icon.png"
+                  alt="Paper saving icon"
+                  width={64}
+                  height={64}
+                  className="h-full w-full"
+                />
+              </div>
+              <h4 className="text-xs font-medium uppercase text-gray-900">
+                SAVE 50%<br />PAPER
+              </h4>
+            </div>
+
+            {/* No Dependency on Technology */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-3 h-16 w-16">
+                <Image
+                  src="/icons/technology-icon.png"
+                  alt="Technology independence icon"
+                  width={64}
+                  height={64}
+                  className="h-full w-full"
+                />
+              </div>
+              <h4 className="text-xs font-medium uppercase text-gray-900">
+                NO DEPENDENCY<br />ON TECHNOLOGY
+              </h4>
+            </div>
+
+            {/* In Your Own Language - Centered in last row */}
+            <div className="col-span-2 flex justify-center">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 h-16 w-16">
+                  <Image
+                    src="/icons/letter-icon.png"
+                    alt="Language icon"
+                    width={64}
+                    height={64}
+                    className="h-full w-full"
+                  />
+                </div>
+                <h4 className="text-xs font-medium uppercase text-gray-900">
+                  IN YOUR<br />OWN LANGUAGE
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        </main>
+      </div>
+      
+      {/* Mobile Footer */}
+      <Footer />
+    </div>
+  </div>
+);
 }

@@ -1,3 +1,4 @@
+import { CONTACT_INFO_HINDI } from "@/app/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -74,7 +75,8 @@ export default function Sampark() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <span className="text-lg">tenpointsbraille@gmail.com</span>
+                {/* <a href="mailto:tenpointsbraille@gmail.com" className="text-lg hover:underline">tenpointsbraille@gmail.com</a> */}
+                <a href={`mailto:${CONTACT_INFO_HINDI.email}`} className="text-base md:text-md hover:underline">{CONTACT_INFO_HINDI.email}</a>
             </div>
               <div className="flex items-center justify-center md:justify-start gap-4">
                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
@@ -82,7 +84,8 @@ export default function Sampark() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                 </div>
-                <span className="text-lg">+91 99800 06010</span>
+                {/* <a href="tel:+919980006010" className="text-lg hover:underline">+91 99800 06010</a> */}
+                <a href={`tel:${CONTACT_INFO_HINDI.phone}`} className="text-base md:text-md hover:underline">{CONTACT_INFO_HINDI.phone}</a>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-4">
                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
@@ -91,7 +94,8 @@ export default function Sampark() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                 </div>
-                <span className="text-lg">बेंगलुरु, भारत</span>
+                {/* <span className="text-lg">बेंगलुरु, भारत</span> */}
+                <span className="text-base md:text-md">{CONTACT_INFO_HINDI.location}</span>
               </div>
             </div>
       </div>

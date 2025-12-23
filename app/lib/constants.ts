@@ -41,6 +41,12 @@ export const CONTACT_INFO: ContactInfo = {
   location: "Ahmedabad, India",
 };
 
+export const CONTACT_INFO_HINDI: ContactInfo = {
+  email: "tenpointsbraille@gmail.com",
+  phone: "+91 99800 06010",
+  location: "बेंगलुरु, भारत",
+};
+
 // Footer Links (Combined English/Hindi)
 export const FOOTER_LINKS: FooterLink[] = [
   { en: "ABOUT", hi: "विशेष", hiSlug: "vishesh" },

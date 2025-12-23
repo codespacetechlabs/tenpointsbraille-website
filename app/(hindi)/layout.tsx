@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/app/components/Footer";
 import SidebarHindi from "@/app/components/SidebarHindi";
-import MobileSidebar from "@/app/components/MobileSidebar";
+import MobileNavbar from "@/app/components/MobileNavbar";
 
 export const metadata: Metadata = {
   title: {
@@ -16,28 +16,37 @@ export default function HindiLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      {/* Mobile Sidebar - Only visible on mobile */}
-      <div className="lg:hidden">
-        <MobileSidebar />
-      </div>
+    <div className="min-h-screen bg-white font-[family-name:var(--font-mukta)]">
+      {/* Mobile Navbar - Logo + Sticky Nav */}
+      <MobileNavbar language="hindi" />
 
-      <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-mukta)]">
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex lg:min-h-screen lg:flex-col">
         <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
-          {/* Desktop Sidebar - Hidden on mobile */}
+          {/* Desktop Sidebar */}
           <aside className="flex h-1/4 w-1/3 items-center justify-center">
             <SidebarHindi />
           </aside>
 
           {/* Main Content */}
-          <div className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">{children}</div>
+          <div className="flex flex-1 flex-col items-center justify-center rounded-lg bg-white">
+            {children}
+          </div>
         </div>
 
-        {/* Footer - Hidden on mobile */}
-        <footer className="hidden lg:block">
-          <Footer />
-        </footer>
+        {/* Desktop Footer */}
+        <Footer />
       </div>
-    </>
+
+      {/* Mobile Content - Below the sticky navbar */}
+      <div className="lg:hidden">
+        <div className="px-4 py-6">
+          {children}
+        </div>
+        
+        {/* Mobile Footer */}
+        <Footer />
+      </div>
+    </div>
   );
 }
