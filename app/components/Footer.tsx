@@ -44,7 +44,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white py-8">
+    <footer className="w-full bg-black text-white py-8 px-8">
       {/* Desktop Layout - Single row */}
       <div className="hidden lg:flex justify-center gap-12">
         {FOOTER_LINKS.map((link, idx) => (
@@ -63,42 +63,34 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Mobile Layout - 2 rows of 3 links each */}
+      {/* Mobile Layout - 2 columns: English links | Hindi links */}
       <div className="lg:hidden px-4">
-        {/* First Row - 3 links */}
-        <div className="grid grid-cols-3 gap-4 mb-6">
-          {FOOTER_LINKS.slice(0, 3).map((link, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-sm font-normal mb-3">
+        <div className="grid grid-cols-2 gap-8">
+          {/* First Column - All English links */}
+          <div className="flex flex-col gap-4">
+            {FOOTER_LINKS.map((link, idx) => (
+              <div key={idx} className="text-left">
                 <Link href={toPath(link.en)} passHref>
-                  {link.en}
+                  <div className="text-sm font-normal">
+                    {link.en}
+                  </div>
                 </Link>
               </div>
-              <div className="text-sm font-normal">
-                <Link href={toPath(link.hiSlug)} passHref>
-                  {link.hi}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Second Row - 3 links */}
-        <div className="grid grid-cols-3 gap-4">
-          {FOOTER_LINKS.slice(3, 6).map((link, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-sm font-normal mb-3">
-                <Link href={toPath(link.en)} passHref>
-                  {link.en}
-                </Link>
-              </div>
-              <div className="text-sm font-normal">
+          {/* Second Column - All Hindi links */}
+          <div className="flex flex-col gap-4">
+            {FOOTER_LINKS.map((link, idx) => (
+              <div key={idx} className="text-left">
                 <Link href={toPath(link.hiSlug)} passHref>
-                  {link.hi}
+                  <div className="text-sm font-normal">
+                    {link.hi}
+                  </div>
                 </Link>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       

@@ -37,7 +37,7 @@ export default function BrailleComparison({ title, description }: BrailleCompari
             </h3>
             <div className="flex w-full items-center justify-center rounded-lg bg-white p-4 md:p-6">
               <Image
-                src="/darklogo.png"
+                src="/tenpointsBraille.png"
                 alt="Tenpoints Braille showing innovative visual representation"
                 width={400}
                 height={300}

@@ -61,4 +61,4 @@ export const FOOTER_LINKS: FooterLink[] = [
 export const SITE_NAME = "Tenpoints Braille";
 export const SITE_DESCRIPTION =
   "Tenpoints Braille is an innovative tool designed to offer the ideal solution for learning and teaching Braille in multiple languages.";
-export const SITE_URL = "https://tenpointsbraille.com";
+export const SITE_URL = "https://tenpointsbraille.in";

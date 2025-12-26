@@ -23,21 +23,28 @@ export default function Fonts() {
         </p>
       </div>
 
-      {/* Font buttons grid */}
-      <div className="mt-12 flex flex-col gap-6 md:mt-16 md:gap-8 lg:mt-20">
-        {/* First row */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
+      {/* Font buttons grid - 2 columns on mobile, original layout on desktop */}
+      <div className="mt-12 grid grid-cols-2 gap-6 md:mt-16 md:flex md:flex-col md:gap-8 lg:mt-20">
+        {/* First row - shows on desktop only */}
+        <div className="col-span-2 hidden md:flex md:flex-wrap md:justify-center md:gap-4 lg:gap-8">
           {FONTS_DATA.slice(0, 5).map((font, idx) => (
             <FontButton key={idx} char={font.char} language={font.language} href={font.href} />
           ))}
         </div>
 
-        {/* Second row */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
+        {/* Second row - shows on desktop only */}
+        <div className="col-span-2 hidden md:flex md:flex-wrap md:justify-center md:gap-4 lg:gap-8">
           {FONTS_DATA.slice(5).map((font, idx) => (
             <FontButton key={idx} char={font.char} language={font.language} href={font.href} />
           ))}
         </div>
+
+        {/* Mobile view - all buttons in 2 columns */}
+        {FONTS_DATA.map((font, idx) => (
+          <div key={idx} className="flex justify-center md:hidden">
+            <FontButton char={font.char} language={font.language} href={font.href} />
+          </div>
+        ))}
       </div>
     </main>
   );

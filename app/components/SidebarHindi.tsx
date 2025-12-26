@@ -6,14 +6,16 @@ export default function SidebarHindi() {
   return (
     <div className="flex flex-col items-center bg-white min-h-screen">
       {/* Logo */}
-      <Image
-        src="/darklogo.png"
-        alt="Tenpoints Braille Logo"
-        width={320}
-        height={100}
-        className="mb-6 w-80"
-        priority
-      />
+      <Link href="/hindi">
+        <Image
+          src="/tenpointsBraille.png"
+          alt="Tenpoints Braille Logo"
+          width={200}
+          height={64}
+          className="mb-6"
+          priority
+        />
+      </Link>
 
       {/* Buttons grid */}
       <div className="grid grid-cols-2 gap-8 mt-4">

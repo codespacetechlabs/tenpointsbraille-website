@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function BengaliFont() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-quicksand)]">
+    <div className="flex min-h-screen flex-col bg-white font-[family-name:var(--font-roboto)]">
       {/* Main content area */}
       <div className="flex flex-1 gap-16 p-8 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[150px] mt-25">
         {/* Sidebar */}

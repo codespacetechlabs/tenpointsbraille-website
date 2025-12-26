@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { quicksand, mukta } from "./fonts";
+import { roboto, mukta } from "./fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tenpointsbraille.com",
+    url: "https://tenpointsbraille.in",
     title: "Tenpoints Braille - Learn and Teach Braille in Multiple Languages",
     description:
       "Tenpoints Braille is an innovative tool designed to offer the ideal solution for learning and teaching Braille in multiple languages.",
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.variable} ${mukta.variable} antialiased`}>
+      <body className={`${roboto.variable} ${mukta.variable} antialiased`}>
         {children}
       </body>
     </html>

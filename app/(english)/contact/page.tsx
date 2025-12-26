@@ -74,21 +74,21 @@ export default function Contact() {
 
         {/* Contact Information */}
         <div className="mt-8 flex flex-col gap-6 text-sm text-gray-800 md:mt-12 md:flex-row md:justify-between md:gap-4">
-          <div className="flex items-center justify-center gap-4 md:justify-start">
+          <div className="flex items-center justify-start gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black">
               <Mail className="h-6 w-6 text-white" />
             </div>
             <a href={`mailto:${CONTACT_INFO.email}`} className="text-base md:text-md hover:underline">{CONTACT_INFO.email}</a>
           </div>
 
-          <div className="flex items-center justify-center gap-4 md:justify-start">
+          <div className="flex items-center justify-start gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black">
               <Phone className="h-6 w-6 text-white" />
             </div>
             <a href={`tel:${CONTACT_INFO.phone}`} className="text-base md:text-md hover:underline">{CONTACT_INFO.phone}</a>
           </div>
 
-          <div className="flex items-center justify-center gap-4 md:justify-start">
+          <div className="flex items-center justify-start gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black">
               <MapPin className="h-6 w-6 text-white" />
             </div>

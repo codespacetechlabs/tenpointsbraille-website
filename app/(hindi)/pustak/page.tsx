@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,15 +19,13 @@ export default function Pustak() {
               </p>
             </div>
             <div
-            className="relative w-[700px] h-[380px] mb-6 overflow-hidden rounded-lg shadow-lg mt-20"
+            className="relative w-full max-w-[700px] aspect-video mb-6 overflow-hidden rounded-lg shadow-lg mt-12 md:mt-20"
             data-playable-hook="screen-block"
             data-playable-component=""
           >
             <canvas
               className="absolute top-0 left-0 w-full h-full"
               data-playable-hook="background-canvas"
-              width="700"
-              height="380"
             ></canvas>
             <video
               preload="none"

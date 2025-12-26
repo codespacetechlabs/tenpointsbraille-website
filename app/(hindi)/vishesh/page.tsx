@@ -37,9 +37,9 @@ export default function Vishesh() {
 
       <hr className="my-8 mt-12 w-full border-t border-black" />
 
-          {/* Founder Section */}
-      <div className="w-full max-w-5xl px-8 py-12">
-        <div className="flex gap-12 items-start">
+      {/* Founder Section */}
+      <div className="w-full max-w-5xl px-4 py-8 md:px-8 md:py-12">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center md:items-start">
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <Image
@@ -47,12 +47,12 @@ export default function Vishesh() {
               alt="Rajdeepgiri"
               width={250}
               height={250}
-              className="rounded-full object-cover"
+              className="rounded-full object-cover w-40 h-40 md:w-[250px] md:h-[250px]"
             />
           </div>
 
           {/* Profile Content */}
-          <div className="flex-1">
+          <div className="flex-1 text-center md:text-left">
             <h2 className="text-3xl font-light mb-2 text-gray-900">राजदीपगिरी</h2>
             <h3 className="text-xl font-normal mb-6 text-gray-800">रचयिता</h3>
 
