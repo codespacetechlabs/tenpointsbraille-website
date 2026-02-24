@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="flex flex-row gap-10 md:gap-10 items-center">
           <Link href="/english" passHref>
             <button
-              className="w-35 h-35 md:w-40 md:h-40 rounded-full bg-gray-300 md:bg-[#5a5a5a] text-black md:text-white flex flex-col justify-center items-center text-lg md:text-xl font-medium select-none focus:outline-none md:hover:bg-gray-300 md:hover:text-black transition-all duration-700 ease-in-out"
+              className="w-35 h-35 md:w-40 md:h-40 rounded-full bg-gray-200 md:bg-[#5a5a5a] text-black md:text-white flex flex-col justify-center items-center text-lg md:text-xl font-medium select-none focus:outline-none md:hover:bg-gray-200 md:hover:text-black transition-all duration-700 ease-in-out"
               style={{ 
                 whiteSpace: "pre-line",
                 boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 -10px 20px rgba(0, 0, 0, 0.3)"
@@ -36,7 +36,7 @@ export default function HomePage() {
           </Link>
           <Link href="/hindi" passHref>
             <button
-              className="w-35 h-35 md:w-40 md:h-40 rounded-full bg-gray-300 md:bg-[#5a5a5a] text-black md:text-white flex flex-col justify-center items-center text-lg md:text-xl font-medium select-none focus:outline-none md:hover:bg-gray-300 md:hover:text-black transition-all duration-700 ease-in-out"
+              className="w-35 h-35 md:w-40 md:h-40 rounded-full bg-gray-200 md:bg-[#5a5a5a] text-black md:text-white flex flex-col justify-center items-center text-lg md:text-xl font-medium select-none focus:outline-none md:hover:bg-gray-200 md:hover:text-black transition-all duration-700 ease-in-out"
               style={{
                 whiteSpace: "pre-line",
                 boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 -10px 20px rgba(0, 0, 0, 0.3)"
