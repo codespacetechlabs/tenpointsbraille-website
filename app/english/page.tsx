@@ -109,139 +109,164 @@ export default function EnglishLanding() {
 
           {/* Language Images Section */}
           <div className="w-[700px] max-w-4xl py-6">
-            {/* First Row - English Only */}
-            <div className="mb-8 flex">
-              <div className="flex flex-col items-left">
+            {/* Grid layout with 3 columns */}
+            <div className="grid grid-cols-3 gap-x-16 gap-y-4">
+              {/* English */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/English.png"
                   alt="English Braille"
-                  width={120}
-                  height={120}
-                  className="mb-2"
+                  width={180}
+                  height={30}
+                  style={{ height: "30px", width: "auto" }}
+                  // className="mb-2"
                 />
               </div>
-            </div>
 
-            {/* Second Row - 3 Languages */}
-            <div className="mb-8 flex gap-16">
-              <div className="flex flex-col items-center">
+              {/* Empty cells for alignment */}
+              <div></div>
+              <div></div>
+
+              {/* Hindi */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Hindi.png"
                   alt="Hindi Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  width={153}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Kannada */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Kannada.png"
-                  alt="Bengali Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Kannada Braille"
+                  width={126}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Telugu */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Telugu.png"
-                  alt="Gujarati Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Telugu Braille"
+                  width={153}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-            </div>
 
-            {/* Third Row - 3 Languages */}
-            <div className="mb-8 flex gap-16">
-              <div className="flex flex-col items-center">
+              {/* Bengali */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Bengali.png"
-                  alt="Gurmukhi Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Bengali Braille"
+                  width={156}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Malayalam */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Malayalam.png"
-                  alt="Kannada Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Malayalam Braille"
+                  width={158}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* German */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/German.png"
-                  alt="Malayalam Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="German Braille"
+                  width={206}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-            </div>
 
-            {/* Fourth Row - 3 Languages */}
-            <div className="mb-8 flex gap-16">
-              <div className="flex flex-col items-center">
+              {/* Gujarati */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Gujarati.png"
-                  alt="Oriya Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Gujarati Braille"
+                  width={180}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Oriya */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Oriya.png"
-                  alt="Tamil Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Oriya Braille"
+                  width={126}
+                  height={30}
+                  // className="mb-2"
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* French */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/French.png"
-                  alt="Telugu Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="French Braille"
+                  width={206}
+                  height={30}
+                  style={{ height: "30px", width: "auto" }}
+                  // className="mb-2"
                 />
               </div>
-            </div>
 
-            {/* Fifth Row - 3 Languages */}
-            <div className="flex gap-16">
-              <div className="flex flex-col items-center">
+              {/* Gurmukhi */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Gurmukhi.png"
-                  alt="German Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Gurmukhi Braille"
+                  width={206}
+                  height={30}
+                  style={{ height: "30px", width: "auto" }}
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Tamil */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Tamil.png"
-                  alt="French Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  alt="Tamil Braille"
+                  width={125}
+                  height={30}
+                  style={{ height: "30px", width: "auto" }}
+                  // className="mb-2"
                 />
               </div>
-              <div className="flex flex-col items-center">
+
+              {/* Spanish */}
+              <div className="flex flex-col items-start">
                 <Image
                   src="/languages/Spanish.png"
                   alt="Spanish Braille"
-                  width={120}
-                  height={100}
-                  className="mb-2"
+                  width={176}
+                  height={30}
+                  style={{ height: "30px", width: "auto" }}
+                  // className="mb-2"
                 />
               </div>
             </div>
@@ -250,7 +275,7 @@ export default function EnglishLanding() {
           {/* Container for language links */}
           <div className="w-[700px] max-w-6xl py-6">
             {/* First Row - 10 Languages */}
-            <div className="mb-4 flex gap-6">
+            <div className="mb-4 flex gap-x-6">
               <Link
                 href="/englishFont"
                 className="flex flex-col items-center transition hover:opacity-70"
@@ -314,7 +339,7 @@ export default function EnglishLanding() {
             </div>
 
             {/* Second Row - 3 Languages */}
-            <div className="flex justify-start gap-6">
+            <div className="flex justify-start gap-x-6">
               <div className="flex flex-col items-center transition hover:opacity-70">
                 <span className="text-center text-sm text-gray-800">German</span>
               </div>
@@ -337,8 +362,8 @@ export default function EnglishLanding() {
                   <Image
                     src="/book-heading.png"
                     alt="Book"
-                    width={120}
-                    height={40}
+                    width={103}
+                    height={35}
                     style={{ height: "auto" }}
                   />
                 </Link>
@@ -439,7 +464,7 @@ export default function EnglishLanding() {
               </div>
 
               {/* Save 50% Paper */}
-              <div className="flex flex-col items-center text-center">
+              {/* <div className="flex flex-col items-center text-center">
                 <div className="mb-4 h-20 w-20">
                   <Image
                     src="/icons/paper-icon.png"
@@ -454,7 +479,7 @@ export default function EnglishLanding() {
                   <br />
                   PAPER
                 </h4>
-              </div>
+              </div> */}
 
               {/* No Dependency on Technology */}
               <div className="flex flex-col items-center text-center">
@@ -580,8 +605,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/English.png"
                 alt="English Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/englishFont" className="text-s text-gray-800 hover:opacity-70">
                 English
@@ -593,8 +619,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Hindi.png"
                 alt="Hindi Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/hindiFont" className="text-s text-gray-800 hover:opacity-70">
                 Hindi
@@ -606,8 +633,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Bengali.png"
                 alt="Bengali Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/bengaliFont" className="text-s text-gray-800 hover:opacity-70">
                 Bengali
@@ -619,8 +647,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Gujarati.png"
                 alt="Gujarati Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/gujaratiFont" className="text-s text-gray-800 hover:opacity-70">
                 Gujarati
@@ -632,8 +661,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Gurmukhi.png"
                 alt="Gurmukhi Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/gurmukhiFont" className="text-s text-gray-800 hover:opacity-70">
                 Gurmukhi
@@ -645,8 +675,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Kannada.png"
                 alt="Kannada Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/kannadaFont" className="text-s text-gray-800 hover:opacity-70">
                 Kannada
@@ -658,8 +689,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Malayalam.png"
                 alt="Malayalam Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/malayalamFont" className="text-s text-gray-800 hover:opacity-70">
                 Malayalam
@@ -671,8 +703,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Oriya.png"
                 alt="Oriya Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/oriyaFont" className="text-s text-gray-800 hover:opacity-70">
                 Oriya
@@ -684,8 +717,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Tamil.png"
                 alt="Tamil Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/tamilFont" className="text-s text-gray-800 hover:opacity-70">
                 Tamil
@@ -697,8 +731,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Telugu.png"
                 alt="Telugu Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <Link href="/teluguFont" className="text-s text-gray-800 hover:opacity-70">
                 Telugu
@@ -710,8 +745,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/German.png"
                 alt="German Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <span className="text-s text-gray-800">German</span>
             </div>
@@ -721,8 +757,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/French.png"
                 alt="French Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <span className="text-s text-gray-800">French</span>
             </div>
@@ -732,8 +769,9 @@ export default function EnglishLanding() {
               <Image
                 src="/languages/Spanish.png"
                 alt="Spanish Braille"
-                width={120}
-                height={120}
+                width={100}
+                height={24}
+                style={{ height: '24px', width: 'auto' }}
               />
               <span className="text-s text-gray-800">Spanish</span>
             </div>
@@ -752,8 +790,9 @@ export default function EnglishLanding() {
                   src="/book-heading.png"
                   alt="Book"
                   width={100}
-                  height={33}
-                  style={{ height: "auto" }}
+                  height={44}
+                  // style={{ height: "auto" }}
+                  style={{ height: '44px', width: 'auto' }}
                 />
               </Link>
               <h3 className="mb-2 text-sm text-gray-900">
@@ -772,8 +811,8 @@ export default function EnglishLanding() {
                   src="/font-heading.png"
                   alt="Font"
                   width={100}
-                  height={33}
-                  style={{ height: "auto" }}
+                  height={44}
+                  style={{ height: '44px', width: 'auto' }}
                 />
               </Link>
               <h3 className="mb-2 text-sm text-gray-900">
@@ -792,8 +831,8 @@ export default function EnglishLanding() {
                   src="/mobile-pdf-heading.png"
                   alt="Mobile PDF"
                   width={100}
-                  height={33}
-                  style={{ height: "auto" }}
+                  height={90}
+                  style={{ height: '90px', width: 'auto' }}
                 />
               </div>
               <h3 className="mb-2 text-sm text-gray-900">
@@ -844,7 +883,7 @@ export default function EnglishLanding() {
             </div>
 
             {/* Save 50% Paper */}
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="h-16 w-16 flex-shrink-0">
                 <Image
                   src="/icons/paper-icon.png"
@@ -857,7 +896,7 @@ export default function EnglishLanding() {
               <h4 className="text-xs font-small uppercase text-gray-900">
                 SAVE 50% PAPER
               </h4>
-            </div>
+            </div> */}
 
             {/* No Dependency on Technology */}
             <div className="flex items-center gap-4">
